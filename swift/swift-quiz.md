@@ -405,9 +405,30 @@ var userLocation: String = "Home" {
 #### Q35. What must a convenience initializer call?
 
 - [ ] a base class convenience initializer
-- [ ] either a designated or another convenience initializer
-- [x] a designated initializer
+- [x] either a designated or another convenience initializer
+- [ ] a designated initializer
 - [ ] none of these answers
+
+A convenience initializer can call either a designated or another convenience initializer. At some point the designated initialiser has to be called, this is a requirement. 
+example:
+```swift
+class Dog {
+  var name: String
+  let fleas: Int
+  // designated init
+  init(fleas: Int, name: String) {
+    self.fleas = fleas
+    self.name = name
+  }
+  convenience init() {
+    self.init(fleas: 4, name: "Mando")
+  }
+  convenience init(name: String) {
+    self.init()
+    self.name = name
+  }
+}
+```
 
 #### Q36. Which object allows you access to specify that a block of code runs in a background thread?
 
