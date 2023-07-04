@@ -482,6 +482,11 @@ class Car {
 - [x] `init?`
 - [ ] init
 
+If an initializer for a struct or class can fail – if you realize part-way through that you cannot create the object using the data you were provided – then you need a failable initializer. Rather than returning a new object instance, this returns an optional instance that will be nil if initialization failed. Making a failable initializer takes two steps:  
+- Write your initializer as init?() rather than init()  
+- Return nil for any paths that should fail  
+[reference](https://www.hackingwithswift.com/quick-start/understanding-swift/why-would-you-want-a-failable-initializer)  
+
 #### Q43. What is printed when this code is executed?
 
 ```swift
