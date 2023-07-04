@@ -322,10 +322,16 @@ for i in 0...100 {
 
 #### Q30. What can AnyObject represent?
 
-- [ ] an instance of any class
+- [x] an instance of any class
 - [ ] an instance of function type
-- [x] all of these answers
+- [ ] all of these answers
 - [ ] an instance of an optional type
+
+**AnyObject refers to any instance of a class**, and is equivalent to id in Objective-C. It’s useful when you specifically want to work with a reference type, because it won’t allow any of Swift’s structs or enums to be used. AnyObject is also used when you want to restrict a protocol so that it can be used only with classes.  
+Any refers to any instance of a class, struct, or enum – literally anything at all.  
+[Apple documentation for AnyObject]()  
+
+
 
 #### Q31. What does this code print?
 
