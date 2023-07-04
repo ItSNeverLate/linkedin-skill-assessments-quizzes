@@ -36,6 +36,20 @@ enum Direction {
 - [ ] Any
 - [ ] Int
 
+**example with raw values**
+When strings are used for raw values, the implicit value for each case is the text of that case’s name.
+The enumeration below is a refinement of the earlier CompassPoint enumeration, with string raw values to represent each direction’s name:
+```swift
+enum CompassPoint: String {
+    case north, south, east, west
+}
+```
+In the example above, CompassPoint.south has an implicit raw value of "south", and so on.
+You access the raw value of an enumeration case with its rawValue property
+[reference](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/enumerations)
+
+
+
 #### Q4. Why is dispatchGroup used in certain situations?
 
 - [ ] It allows multiple synchronous or asynchronous operations to run on different queues.
