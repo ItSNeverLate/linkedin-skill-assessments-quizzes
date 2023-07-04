@@ -353,6 +353,19 @@ let t = names.enumerated().first().offset
 - [ ] 1
 - [ ] Larry
 
+**explanation**   
+The reason why this code does not compile is that the `Array` method `enumerated()` returns a type `EnumeratedSequence<Array<Element>>`, a sequence of pairs (n, x), where n represents a consecutive integer starting at zero and x represents an element of the sequence.   
+`enumerated()` has a method `public func first(where:)` that returns an optional, the first element that satisfies the predicate.  
+The element returned by `first(where:)` is an optional tuple of type `(offset: Int, element: String)?`  
+[Apple documentation for enumerated()](https://developer.apple.com/documentation/swift/array/enumerated())  
+A corrected code could look like this and would print an optional value, the index at which "Larry" has been found (in this case 0) :  
+```swift
+let names = ["Larry", "Sven", "Bear"]
+let t = names.enumerated().first(where: { _, element -> Bool in
+        element == "Larry" })?.offset
+```
+
+
 #### Q32. What is the value of test after this code executes?
 
 ```swift
