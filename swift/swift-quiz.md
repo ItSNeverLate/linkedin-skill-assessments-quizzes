@@ -194,6 +194,9 @@ names.map { (s) -> String in
 - [x] ["Bear", "Joe", "Clark"]
 - [ ] This code contains an error.
 
+**explanation**  
+The map function iterates on the array and returns ` ["BEAR", "JOE", "CLARK"]` but this is not assigned to `names` which is not being changed (and it is declared as a constant anyway) and retains his original value.  
+
 #### Q18. What describes this line of code?
 
 ```swift
