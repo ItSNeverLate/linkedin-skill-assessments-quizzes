@@ -144,6 +144,18 @@ func add(a: Int, b: Int) -> Int { return a+b }
 - [ ] Int<Optional>
 - [ ] Functions don't have types.
 
+**explanation**  
+Every function has a specific function type, made up of the parameter types and the return type of the function.
+for example:
+```swift
+func printHelloWorld() {
+    print("hello, world")
+}
+```
+The type of this function is `() -> Void`, or “a function that has no parameters, and returns Void.”  
+[reference](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/functions/)
+
+
 #### Q12. What is the correct way to call this function?
 
 ```swift
