@@ -277,10 +277,13 @@ if let s = String.init("some string") {
 
 #### Q25. Which code snippet correctly creates a typealias closure?
 
-- [x] typealias CustomClosure: () -> ()
+- [x] typealias CustomClosure = () -> ()
 - [ ] typealias CustomClosure { () -> () }
 - [ ] typealias CustomClosure -> () -> ()
 - [ ] typealias CustomClosure -> () {}
+
+A `typealias` is always declared with the `=` operator.  
+[reference](https://www.avanderlee.com/swift/typealias-usage-swift/)   
 
 #### Q26. How do you reference class members from within a class?
 
