@@ -106,6 +106,7 @@ The ArraySlice type makes it fast and efficient for you to perform operations on
 Unlike Array and ContiguousArray, the starting index for an ArraySlice instance isn’t always zero. Slices maintain the same indices of the larger array for the same elements, so the starting index of a slice depends on how it was created, letting you perform index-based operations on either a full array or a slice.  
 The above code returns a slice of value `["2"]` but the index did not change. `let y = x[1]` would give the expected result.  
 To safely reference the starting and ending indices of a slice, always use the startIndex and endIndex properties instead of specific values.  
+For ex `print(x.startIndex)` would give 1!
 [reference](https://developer.apple.com/documentation/swift/arrayslice)  
 
 
