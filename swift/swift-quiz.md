@@ -635,9 +635,9 @@ var vals = [1,2,3]
 #### Q56. When is deinit called?
 
 - [ ] When a class instance needs memory
-- [x] All of these answers
+- [ ] All of these answers
 - [ ] When the executable code is finished
-- [ ] When a class instance is being removed from memory
+- [x] When a class instance is being removed from memory
 
 #### Q57. How do you declare an optional String?
 
