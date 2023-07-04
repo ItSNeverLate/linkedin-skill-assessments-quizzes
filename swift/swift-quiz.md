@@ -94,6 +94,22 @@ let y = x[0]
 - [ ] 2
 - [ ] nil
 
+**explanation**  
+`dropFirst()` from `Swift.Collection.Array` returns a type of `ArraySlice<Element>`   
+
+as in the documentation pages:  
+`@inlinable public func dropFirst(_ k: Int = 1) -> ArraySlice<Element>`  
+
+The ArraySlice type makes it fast and efficient for you to perform operations on sections of a larger array. Instead of copying over the elements of a slice to new storage, an ArraySlice instance presents a view onto the storage of a larger array. And because ArraySlice presents the same interface as Array, you can generally perform the same operations on a slice as you could on the original array.  
+
+**Slices Maintain Indices**  
+Unlike Array and ContiguousArray, the starting index for an ArraySlice instance isn’t always zero. Slices maintain the same indices of the larger array for the same elements, so the starting index of a slice depends on how it was created, letting you perform index-based operations on either a full array or a slice.  
+The above code returns a slice of value `["2"]` but the index did not change. `let y = x[1]` would give the expected result.  
+To safely reference the starting and ending indices of a slice, always use the startIndex and endIndex properties instead of specific values.  
+For ex `print(x.startIndex)` would give 1!
+[reference](https://developer.apple.com/documentation/swift/arrayslice)  
+
+
 #### Q9. What is the value of test in this code?
 
 ```swift
@@ -127,6 +143,18 @@ func add(a: Int, b: Int) -> Int { return a+b }
 - [x] (Int, Int) -> Int
 - [ ] Int<Optional>
 - [ ] Functions don't have types.
+
+**explanation**  
+Every function has a specific function type, made up of the parameter types and the return type of the function.
+for example:
+```swift
+func printHelloWorld() {
+    print("hello, world")
+}
+```
+The type of this function is `() -> Void`, or “a function that has no parameters, and returns Void.”  
+[reference](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/functions/)
+
 
 #### Q12. What is the correct way to call this function?
 
