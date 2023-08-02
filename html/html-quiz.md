@@ -773,8 +773,8 @@ From [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr): The HT
 
 #### Q47. Which choice is NOT a legal value for the **name** attribute within a `<meta>` tag?
 
-- [x] charset
-- [ ] viewport
+- [ ] charset
+- [x] viewport
 - [ ] generator
 - [ ] author
 
